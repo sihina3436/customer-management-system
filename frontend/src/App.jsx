@@ -1,9 +1,14 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Header from './components/Header'
 
-const App = () => {
+export default function App() {
   return (
-    <div>App</div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="container bg-white rounded shadow p-6 mt-6">
+        <Outlet />
+      </main>
+    </div>
   )
 }
-
-export default App
